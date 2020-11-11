@@ -10,10 +10,13 @@ class Settings:
 
         # calculate game size as a percentage of device screen size
         deviceWidth, deviceHeight = pyautogui.size()
-        screenPct = 0.6667
-        gameWidth: int = int((deviceWidth * screenPct // 100) * 100)
-        gameHeight: int =  int((deviceHeight * screenPct // 100) * 100)
+        self.screenPct = 0.75
 
+        gameWidth: int = int((deviceWidth * self.screenPct // 100) * 100)
+        gameHeight: int =  int((deviceHeight * self.screenPct // 100) * 100)
+
+        self.imageScale = 1.5;
         self.screen_width = gameWidth #1200
         self.screen_height = gameHeight # 800
         self.bg_color = (230, 230, 230)
+        self.iconScale = 1.5;
