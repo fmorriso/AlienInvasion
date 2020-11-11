@@ -15,7 +15,7 @@ class Settings:
         gameWidth: int = int((deviceWidth * self.screenPct // 100) * 100)
         gameHeight: int =  int((deviceHeight * self.screenPct // 100) * 100)
 
-        self.imageScale = 1 + self.screenPct#1.5;
+        self.imageScale = deviceWidth / deviceHeight + self.screenPct;
         self.screen_width = gameWidth #1200
         self.screen_height = gameHeight # 800
         self.bg_color = (230, 230, 230)
