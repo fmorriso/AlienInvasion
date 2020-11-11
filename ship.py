@@ -19,15 +19,13 @@ class Ship:
         # add green border to help with debugging of scale up attempt
         # pygame.draw.rect(self.image, Ship.GREEN, self.rect, 1)
 
+        # scale the image
         # https://pygame.readthedocs.io/en/latest/3_image/image.html
         angle = 0
         scale = ai_game.settings.imageScale # 1.5
         self.image = pygame.transform.rotozoom(self.image, angle, scale)
+        self.rect = self.image.get_rect();
 
-        # adjust for new image height
-        rect = self.image.get_rect()
-        print(f'scaled image rectangle: {rect}')
-        self.rect = rect
         print(f'adjusted self.rect = {self.rect}')
 
         # Start each new ship at the bottom center of the screen.
