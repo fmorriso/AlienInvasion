@@ -19,7 +19,7 @@ class Settings:
         self.screen_width = gameWidth #1200
         self.screen_height = gameHeight # 800
         self.bg_color = (230, 230, 230)
-        self.iconScale = 1.5;
+        #self.iconScale = 1.5
 
         # Ship settings
         self.ship_speed = 1.5
