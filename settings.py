@@ -10,16 +10,23 @@ class Settings:
 
         # calculate game size as a percentage of device screen size
         deviceWidth, deviceHeight = pyautogui.size()
-        self.screenPct = 0.66667
+        self.screenPct: float = float(2.0 / 3.0)
 
         gameWidth: int = int((deviceWidth * self.screenPct // 100) * 100)
         gameHeight: int =  int((deviceHeight * self.screenPct // 100) * 100)
 
-        self.imageScale = deviceWidth / deviceHeight + self.screenPct
+        self.scaleFactor = deviceWidth / deviceHeight + self.screenPct
+        print(f'scale factor = {self.scaleFactor}')
         self.screen_width = gameWidth #1200
         self.screen_height = gameHeight # 800
         self.bg_color = (230, 230, 230)
-        #self.iconScale = 1.5
 
         # Ship settings
-        self.ship_speed = 1.5
+        self.ship_speed: float = float(1.0 * self.scaleFactor)
+
+        # Bullet settings
+        self.bullet_speed = 5 * self.scaleFactor
+        self.bullet_width = 3 * self.scaleFactor
+        self.bullet_height = 15 * self.scaleFactor
+        self.bullet_color = (60, 60, 60)
+        self.bullets_allowed = 3
