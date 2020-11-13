@@ -18,7 +18,7 @@ class Ship:
         # scale the image
         # https://pygame.readthedocs.io/en/latest/3_image/image.html
         angle: float = 0
-        scale: float = ai_game.settings.imageScale
+        scale: float = ai_game.settings.scaleFactor
         self.image = pygame.transform.rotozoom(self.image, angle, scale)
         self.rect = self.image.get_rect();
 
@@ -26,7 +26,7 @@ class Ship:
         self.rect.midbottom = self.screen_rect.midbottom
 
         # Store a decimal value for the ship's horizontal position.
-        self.x = float(self.rect.x)
+        self.x: float = float(self.rect.x)
 
         # Movement flags
         self.moving_right = False
