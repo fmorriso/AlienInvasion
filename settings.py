@@ -26,7 +26,7 @@ class Settings:
 
         # Bullet settings
         self.bullet_speed = 5 * self.scaleFactor
-        self.bullet_width = 3 * self.scaleFactor
+        self.bullet_width = 3 * self.scaleFactor # * 100 <--- for testing only
         self.bullet_height = 15 * self.scaleFactor
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed: int = int(3 * self.scaleFactor)
