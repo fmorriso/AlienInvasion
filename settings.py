@@ -23,6 +23,7 @@ class Settings:
 
         # Ship settings
         self.ship_speed: float = float(1.0 * self.scaleFactor)
+        self.ship_limit = 3
 
         # Bullet settings
         self.bullet_speed = 5 * self.scaleFactor
