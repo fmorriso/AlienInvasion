@@ -1,6 +1,7 @@
 # import screen size utility module that helps us scale the game based on screen size
 import pyautogui
 
+
 class Settings:
     """A class to store all settings for Alien Invasion."""
 
@@ -13,12 +14,12 @@ class Settings:
         self.screenPct: float = float(2.0 / 3.0)
 
         gameWidth: int = int((deviceWidth * self.screenPct // 100) * 100)
-        gameHeight: int =  int((deviceHeight * self.screenPct // 100) * 100)
+        gameHeight: int = int((deviceHeight * self.screenPct // 100) * 100)
 
         self.scaleFactor = deviceWidth / deviceHeight + self.screenPct
         print(f'scale factor = {self.scaleFactor}')
-        self.screen_width = gameWidth #1200
-        self.screen_height = gameHeight # 800
+        self.screen_width = gameWidth  # 1200
+        self.screen_height = gameHeight  # 800
         self.bg_color = (230, 230, 230)
 
         # Ship settings
@@ -27,7 +28,7 @@ class Settings:
 
         # Bullet settings
         self.bullet_speed = 5 * self.scaleFactor
-        self.bullet_width = 3 * self.scaleFactor # * 100 <--- for testing only
+        self.bullet_width = 3 * self.scaleFactor  # * 100 <--- for testing only
         self.bullet_height = 15 * self.scaleFactor
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed: int = int(3 * self.scaleFactor)
