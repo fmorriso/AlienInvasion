@@ -29,4 +29,4 @@ class Settings:
         self.bullet_width = 3 * self.scaleFactor
         self.bullet_height = 15 * self.scaleFactor
         self.bullet_color = (60, 60, 60)
-        self.bullets_allowed = 3
+        self.bullets_allowed: int = int(3 * self.scaleFactor)
