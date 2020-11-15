@@ -10,16 +10,16 @@ class Settings:
         # Screen settings
 
         # calculate game size as a percentage of device screen size
-        deviceWidth, deviceHeight = pyautogui.size()
+        device_width, device_height = pyautogui.size()
         self.screenPct: float = float(2.0 / 3.0)
 
-        gameWidth: int = int((deviceWidth * self.screenPct // 100) * 100)
-        gameHeight: int = int((deviceHeight * self.screenPct // 100) * 100)
+        game_width: int = int((device_width * self.screenPct // 100) * 100)
+        game_height: int = int((device_height * self.screenPct // 100) * 100)
 
-        self.scaleFactor = deviceWidth / deviceHeight + self.screenPct
+        self.scaleFactor = device_width / device_height + self.screenPct
         print(f'scale factor = {self.scaleFactor}')
-        self.screen_width = gameWidth  # 1200
-        self.screen_height = gameHeight  # 800
+        self.screen_width = game_width  # 1200
+        self.screen_height = game_height  # 800
         self.bg_color = (230, 230, 230)
 
         # Ship settings
