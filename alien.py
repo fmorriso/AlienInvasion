@@ -17,6 +17,7 @@ class Alien(Sprite):
         self.rect = self.image.get_rect()
 
         # scale the image
+        # double angle = 0;
         angle: float = 0
         scale: float = float(ai_game.settings.scaleFactor * 0.5)
         self.image = pygame.transform.rotozoom(self.image, angle, scale)
