@@ -1,6 +1,10 @@
 import pygame
 from pygame.locals import *
- 
+import sys
+
+from settings import Settings
+
+
 class Ship:
     """A class to manage the ship."""
     GREEN = (0, 255, 0)
@@ -12,7 +16,9 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         # Load the ship image and get its rect.
-        self.image = pygame.image.load('images/ship.bmp')
+        self.current_dir = Settings.get_image_directory()
+        # print(self.current_dir)
+        self.image = pygame.image.load(f'{self.current_dir}/images/ship.bmp')
         self.image.convert()
         self.rect = self.image.get_rect()
         # scale the image

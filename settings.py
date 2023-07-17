@@ -1,4 +1,6 @@
 # import screen size utility module that helps us scale the game based on screen size
+import sys
+
 import pyautogui
 
 
@@ -38,3 +40,16 @@ class Settings:
         self.fleet_drop_speed: int = int(10 * self.scaleFactor)
         # fleet_direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
+
+        # Directory locations
+
+    @staticmethod
+    def get_image_directory() -> str:
+        # get current file being run
+        current_file: str = sys.argv[0]
+        # print(self.current_file)
+        i : int = current_file.rindex("\\")
+        # print(i)
+        current_dir: str = current_file[0:i]
+        # print(current_dir)
+        return current_dir
