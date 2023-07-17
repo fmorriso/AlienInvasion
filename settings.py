@@ -45,11 +45,19 @@ class Settings:
 
     @staticmethod
     def get_image_directory() -> str:
+        print('top of get_image_directory')
         # get current file being run
         current_file: str = sys.argv[0]
-        # print(self.current_file)
-        i : int = current_file.rindex("\\")
-        # print(i)
+        print(f'current_file: {current_file}')
+        i: int = -1
+        try:
+            i  = current_file.rindex("\\")
+        except ValueError:
+            print(f'{i}.  No backslash found. Trying forward slash')            
+        if i == -1:
+            i = current_file.rindex('/')
+            
+        print(f'last directory separator character location: {i}')
         current_dir: str = current_file[0:i]
-        # print(current_dir)
+        print(f'current_dir: {current_dir}')
         return current_dir
