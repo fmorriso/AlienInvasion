@@ -1,5 +1,5 @@
 # AlienInvasion
-Alient Invasion Game using Python 3.11
+Alien Invasion Game using Python 3.11
 # References
 Python Crash Course, by Eric Matthes
 # Changes I made
