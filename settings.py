@@ -7,6 +7,26 @@ import pyautogui
 class Settings:
     """A class to store all settings for Alien Invasion."""
 
+    def __find_images_directory(self) -> str:
+        print('top of __find_images_directory__')
+        # get current file being run
+        current_file: str = sys.argv[0]
+        print(f'current_file: {current_file}')
+        i: int = -1
+        try:
+            i = current_file.rindex("\\")
+        except ValueError:
+            print(f'{i}.  No backslash found. Trying forward slash')
+        if i == -1:
+            i = current_file.rindex('/')
+
+        print(f'last directory separator character location: {i}')
+        current_dir: str = current_file[0:i]
+        print(f'In settings.py, method __find_images_directory found images at: {current_dir}')
+        # __images_directory = current_dir
+        # print(f'In settings.py, variable __images_directory =: {__images_directory}')
+        return current_dir
+
     def __init__(self):
         """Initialize the game's settings."""
         # Screen settings
@@ -42,22 +62,10 @@ class Settings:
         self.fleet_direction = 1
 
         # Directory locations
+        print('In settings.py, init it about to call __find_images_directory__')
+        self.__images_directory = self.__find_images_directory()
+        print(f'In settings.py, variable __images_directory__ = {self.__images_directory}')
 
-    @staticmethod
-    def get_image_directory() -> str:
-        print('top of get_image_directory')
-        # get current file being run
-        current_file: str = sys.argv[0]
-        print(f'current_file: {current_file}')
-        i: int = -1
-        try:
-            i  = current_file.rindex("\\")
-        except ValueError:
-            print(f'{i}.  No backslash found. Trying forward slash')            
-        if i == -1:
-            i = current_file.rindex('/')
-            
-        print(f'last directory separator character location: {i}')
-        current_dir: str = current_file[0:i]
-        print(f'current_dir: {current_dir}')
-        return current_dir
+    def get_image_directory(self) -> str:
+        # print(f'in settings.py, method get_image_directory is about to return {self.__images_directory} ')
+        return self.__images_directory

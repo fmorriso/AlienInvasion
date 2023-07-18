@@ -16,8 +16,8 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         # Load the ship image and get its rect.
-        self.current_dir = Settings.get_image_directory()
-        # print(self.current_dir)
+        self.current_dir = Settings().get_image_directory()
+        print(f'in ship.py, images directory = {self.current_dir}')
         self.image = pygame.image.load(f'{self.current_dir}/images/ship.bmp')
         self.image.convert()
         self.rect = self.image.get_rect()
