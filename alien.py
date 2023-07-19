@@ -15,7 +15,7 @@ class Alien(Sprite):
         self.settings = ai_game.settings
 
         # Load the alien image and set its rect attribute.
-        self.images_dir = Settings().get_image_directory()
+        self.images_dir = Settings().get_images_directory()
         # print(f'in alien.py, images directory = {self.images_dir}')
         self.image = pygame.image.load(f'{self.images_dir}/alien.bmp')
         self.image.convert()

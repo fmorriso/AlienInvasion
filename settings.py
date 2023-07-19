@@ -65,5 +65,6 @@ class Settings:
             Settings.__images_dir = Settings.__find_images_directory()
             # print(f'In settings.py, variable images_dir = {Settings.__images_dir}')
 
-    def get_image_directory(self) -> str:
+    @staticmethod
+    def get_images_directory() -> str:
         return Settings.__images_dir
