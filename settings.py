@@ -1,36 +1,32 @@
 # import screen size utility module that helps us scale the game based on screen size
 import sys
-
+import pathlib
 import pyautogui
 
 
 class Settings:
     """A class to store all settings for Alien Invasion."""
 
-    # static variable containing the location of images used by this program
-    images_dir: str = None
+    # private class variable containing the location of images used by this program
+    __images_dir: str = ''
 
     @staticmethod
     def __find_images_directory() -> str:
         # print('top of __find_images_directory__')
         # get current file being run as the first step
         current_file: str = sys.argv[0]
+        # print(f'Current __file__ = {pathlib.Path(__file__)}')
         # print(f'Current file = {current_file}')
-        # locate last (right-most) directory separator character, which might be / or \
-        i: int = -1
-        try:
-            i = current_file.rindex("\\")
-        except ValueError:
-            print(f'{i}.  No backslash found. Trying forward slash')
-        if i == -1:
-            i = current_file.rindex('/')
 
-        # print(f'last directory separator character location: {i}')
-        images_directory: str = current_file[0:i] + '/images'
-        print(f'In settings.py, method __find_images_directory found images at: {images_directory}')
-        # __images_directory = images_dir
-        # print(f'In settings.py, variable __images_directory =: {__images_directory}')
-        return images_directory
+        current_file_path = pathlib.Path(current_file)
+        # print(f'parent path = {current_file_path}')
+
+        parent_path = current_file_path.parent
+        images_directory = parent_path / 'images'
+        if images_directory.is_dir() == False:
+            print('Error: unable to locate images directory')
+
+        return str(images_directory)
 
     def __init__(self):
         """Initialize the game's settings."""
@@ -67,10 +63,10 @@ class Settings:
         self.fleet_direction = 1
 
         # Directory locations
-        if Settings.images_dir is None:
-            print('In settings.py, init is about to call __find_images_directory__')
-            Settings.images_dir = Settings.__find_images_directory()
-            print(f'In settings.py, variable images_dir = {Settings.images_dir}')
+        if Settings.__images_dir == '':
+            # print('In settings.py, init is about to call __find_images_directory__')
+            Settings.__images_dir = Settings.__find_images_directory()
+            # print(f'In settings.py, variable images_dir = {Settings.__images_dir}')
 
     def get_image_directory(self) -> str:
-        return Settings.images_dir
+        return Settings.__images_dir
