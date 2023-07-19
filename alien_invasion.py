@@ -18,7 +18,10 @@ class AlienInvasion:
     def __init__(self):
         """Initialize the game, and create game resources."""
         pygame.init()
+        print(f'pygame version = {pygame.version.ver}')
+
         self.settings = Settings()
+        # print(f'in alien_invasion.py, Settings.images_dir = {Settings.images_dir}')
 
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
