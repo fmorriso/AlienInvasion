@@ -19,11 +19,8 @@ class Settings:
         # print(f'Current file = {current_file}')
 
         current_file_path = pathlib.Path(current_file)
-        # print(f'parent path = {current_file_path}')
-
-        parent_path = current_file_path.parent
-        images_directory = parent_path / 'images'
-        if images_directory.is_dir() == False:
+        images_directory = current_file_path.parent.joinpath('images')
+        if not images_directory.is_dir():
             print('Error: unable to locate images directory')
 
         return str(images_directory)
