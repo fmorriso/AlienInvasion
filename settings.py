@@ -19,7 +19,10 @@ class Settings:
         # print(f'Current file = {current_file}')
 
         current_file_path = pathlib.Path(current_file)
-        images_directory = current_file_path.parent.joinpath('images')
+        base_dir = current_file_path.parent
+        # locate the images directory beneath the base directory
+        sub_directories = list(base_dir.glob('**/images'))
+        images_directory = sub_directories[0]
         if not images_directory.is_dir():
             print('Error: unable to locate images directory')
 
