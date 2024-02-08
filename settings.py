@@ -34,7 +34,7 @@ class Settings:
 
         # calculate game size as a percentage of device screen size
         device_width, device_height = pyautogui.size()
-        self.screenPct: float = float(2.0 / 3.0)
+        self.screenPct: float = float(3.0 / 4.0)
 
         game_width: int = int((device_width * self.screenPct // 100) * 100)
         game_height: int = int((device_height * self.screenPct // 100) * 100)
@@ -57,8 +57,8 @@ class Settings:
         self.bullets_allowed: int = int(3 * self.scaleFactor)
 
         # Alien settings
-        self.alien_speed = 1.0 * self.scaleFactor
-        self.fleet_drop_speed: int = int(10 * self.scaleFactor)
+        self.alien_speed = 0.6667 * self.scaleFactor
+        self.fleet_drop_speed: int = int(4 * self.scaleFactor)
         # fleet_direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
 
