@@ -57,7 +57,7 @@ class Settings:
         self.bullets_allowed: int = int(3 * self.scaleFactor)
 
         # Alien settings
-        self.alien_speed = 0.6667 * self.scaleFactor
+        self.alien_speed = 2.0 / 3.0 * self.scaleFactor
         self.fleet_drop_speed: int = int(4 * self.scaleFactor)
         # fleet_direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
