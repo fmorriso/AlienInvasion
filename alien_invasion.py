@@ -15,9 +15,11 @@ from alien import Alien
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
-    def __init__(self):
+    def __init__(self, title):
+        self.screen_title = title
         """Initialize the game, and create game resources."""
         pygame.init()
+        self.screen_title = f'{self.screen_title}, PyGame version {pygame.version.ver}'
         print(f'pygame version = {pygame.version.ver}')
 
         self.settings = Settings()
@@ -25,7 +27,7 @@ class AlienInvasion:
 
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
-        pygame.display.set_caption("Alien Invasion")
+        pygame.display.set_caption(f"Alien Invasion - {self.screen_title}")
 
         # Create an instance to store game statistics.
         self.stats = GameStats(self)

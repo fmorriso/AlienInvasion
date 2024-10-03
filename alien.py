@@ -25,7 +25,7 @@ class Alien(Sprite):
         angle: float = 0
         scale: float = float(ai_game.settings.scaleFactor * 0.5)
         self.image = pygame.transform.rotozoom(self.image, angle, scale)
-        self.rect = self.image.get_rect();
+        self.rect = self.image.get_rect()
 
         # Start each new alien near the top left of the screen.
         self.rect.x = self.rect.width
