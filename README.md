@@ -1,5 +1,5 @@
 # AlienInvasion
-Alien Invasion Game using Python 
+Alien Invasion Game using Python and PyGame
 # References
 Python Crash Course, by Eric Matthews
 # Changes I made
@@ -8,10 +8,11 @@ Python Crash Course, by Eric Matthews
 1. Added method to locate images directory to fix error loading images
 ## Tools Used
 
-| Tool    |  Version |
-|:--------|---------:|
-| Python  |   3.12.7 |
-| VSCode  |   1.93.1 |
-| PyCharm | 2024.2.1 |
-| PyGame  |    2.6.1 |
+| Tool      |  Version |
+|:----------|---------:|
+| Python    |   3.12.7 |
+| VSCode    |   1.93.1 |
+| PyCharm   | 2024.2.1 |
+| PyGame    |    2.6.1 |
+| PyAutoGUI |   0.0.54 |
 
