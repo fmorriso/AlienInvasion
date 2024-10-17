@@ -10,9 +10,9 @@ Python Crash Course, by Eric Matthews
 
 | Tool      |  Version |
 |:----------|---------:|
-| Python    |   3.12.7 |
-| VSCode    |   1.94.0 |
-| PyCharm   | 2024.2.1 |
+| Python    |   3.13.0 |
+| VSCode    |   1.94.2 |
+| PyCharm   | 2024.2.3 |
 | PyGame    |    2.6.1 |
 | PyAutoGUI |   0.9.54 |
 
