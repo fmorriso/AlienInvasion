@@ -41,7 +41,7 @@ class Settings:
 
         self.scaleFactor = device_width / device_height + self.screenPct
         print(f'scale factor = {self.scaleFactor}')
-        # self.screen_width = game_width
+        self.screen_width = game_width
         self.screen_height = game_height
         self.bg_color = (230, 230, 230)
 
