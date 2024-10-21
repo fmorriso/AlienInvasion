@@ -6,6 +6,7 @@ Python Crash Course, by Eric Matthews
 1. Added scaling using pyautogui and a Settings class
 1. Upgraded to python 3.12.7
 1. Added method to locate images directory to fix error loading images
+
 ## Tools Used
 
 | Tool      |  Version |
