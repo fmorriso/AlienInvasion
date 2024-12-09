@@ -1,5 +1,5 @@
 # AlienInvasion
-Alien Invasion Game using Python and PyGame
+Alien Invasion Game using Python and PyGame with auto scaling using PyAutoGUI
 # References
 Python Crash Course, by Eric Matthews
 # Changes I made
@@ -11,9 +11,16 @@ Python Crash Course, by Eric Matthews
 
 | Tool      |  Version |
 |:----------|---------:|
-| Python    |   3.13.0 |
-| VSCode    |   1.94.2 |
-| PyCharm   | 2024.2.3 |
+| Python    |   3.13.1 |
 | PyGame    |    2.6.1 |
 | PyAutoGUI |   0.9.54 |
+| VSCode    |   1.95.3 |
+| PyCharm   | 2024.3.0 |
 
+
+## Change History
+
+| Date       | Description              |
+|:-----------|:-------------------------|
+| 2020-11-10 | Initial creation         |
+| 2024-12-09 | upgrade to python 3.13.1 |
