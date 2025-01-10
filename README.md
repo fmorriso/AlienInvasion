@@ -14,13 +14,14 @@ Python Crash Course, by Eric Matthews
 | Python    |   3.13.1 |
 | PyGame    |    2.6.1 |
 | PyAutoGUI |   0.9.54 |
-| VSCode    |   1.95.3 |
+| VSCode    |   1.96.2 |
 | PyCharm   | 2024.3.0 |
 
 
 ## Change History
 
-| Date       | Description              |
-|:-----------|:-------------------------|
-| 2020-11-10 | Initial creation         |
-| 2024-12-09 | upgrade to python 3.13.1 |
+| Date       | Description                            |
+|:-----------|:---------------------------------------|
+| 2020-11-10 | Initial creation                       |
+| 2024-12-09 | upgrade to python 3.13.1               |
+| 2025-01-10 | Refactor Settings class to GuiSettings |

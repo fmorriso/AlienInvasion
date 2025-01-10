@@ -7,7 +7,7 @@ from alien import Alien
 from bullet import Bullet
 from button import Button
 from game_stats import GameStats
-from settings import Settings
+from gui_settings import GuiSettings
 from ship import Ship
 
 
@@ -21,7 +21,7 @@ class AlienInvasion:
         self.screen_title = f'{self.screen_title}, PyGame version {pygame.version.ver}'
         print(f'pygame version = {pygame.version.ver}')
 
-        self.settings = Settings()
+        self.settings = GuiSettings()
         # print(f'in alien_invasion.py, Settings.images_dir = {Settings.images_dir}')
 
         self.screen = pygame.display.set_mode(

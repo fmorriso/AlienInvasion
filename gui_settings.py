@@ -4,7 +4,7 @@ import pathlib
 import pyautogui
 
 
-class Settings:
+class GuiSettings:
     """A class to store all settings for Alien Invasion."""
 
     # private class variable containing the location of images used by this program
@@ -63,11 +63,11 @@ class Settings:
         self.fleet_direction = 1
 
         # Directory locations
-        if Settings.__images_dir == '':
-            # print('In settings.py, init is about to call __find_images_directory__')
-            Settings.__images_dir = Settings.__find_images_directory()
-            # print(f'In settings.py, variable images_dir = {Settings.__images_dir}')
+        if GuiSettings.__images_dir == '':
+            # print('In gui_settings.py, init is about to call __find_images_directory__')
+            GuiSettings.__images_dir = GuiSettings.__find_images_directory()
+            # print(f'In gui_settings.py, variable images_dir = {Settings.__images_dir}')
 
     @staticmethod
     def get_images_directory() -> str:
-        return Settings.__images_dir
+        return GuiSettings.__images_dir

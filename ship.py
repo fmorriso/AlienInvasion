@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 import sys
 
-from settings import Settings
+from gui_settings import GuiSettings
 
 
 class Ship:
@@ -16,7 +16,7 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         # Load the ship image and get its rect.
-        self.images_dir = Settings().get_images_directory()
+        self.images_dir = GuiSettings().get_images_directory()
         # print(f'in ship.py, images directory = {self.images_dir}')
         self.image = pygame.image.load(f'{self.images_dir}/ship.bmp')
         self.image.convert()
