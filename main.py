@@ -25,7 +25,7 @@ if __name__ == '__main__':
     msg = f'PyAutoGUI version {get_package_version("pyautogui")}'
     print(msg)
 
-    msg = f'PyGame version {get_package_version("pygame")}'
+    msg = f'PyGame version {get_package_version("pygame-ce")}'
     print(msg)
 
     main()
