@@ -24,10 +24,10 @@ Python Crash Course, by Eric Matthews
 
 ## Change History
 
-| Date       | Description                                          |
-| :--------- | :--------------------------------------------------- |
-| 2020-11-10 | Initial creation                                     |
-| 2024-12-09 | upgrade to python 3.13.1                             |
-| 2025-01-10 | Refactor Settings class to GuiSettings               |
-| 2025-03-20 | Verify code runs with latest Python, PyCharm, VSCode |
-| 2025-12-02| switch from pygame to pygame-ce which works with python 3.14.1 |
+| Date       | Description                                                    |
+| :--------- | :------------------------------------------------------------- |
+| 2020-11-10 | Initial creation                                               |
+| 2024-12-09 | upgrade to python 3.13.1                                       |
+| 2025-01-10 | Refactor Settings class to GuiSettings                         |
+| 2025-03-20 | Verify code runs with latest Python, PyCharm, VSCode           |
+| 2025-12-02 | switch from pygame to pygame-ce which works with python 3.14.1 |
