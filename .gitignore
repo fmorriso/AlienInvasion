@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# do not need to save these
+*.pyc
+
 # log file
 *.log
 
