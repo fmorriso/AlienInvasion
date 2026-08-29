@@ -14,11 +14,11 @@ from ship import Ship
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
-    def __init__(self, title):
+    def __init__(self, title:str):
         self.screen_title = title
         """Initialize the game, and create game resources."""
         pygame.init()
-        self.screen_title = f'{self.screen_title}, PyGame version {pygame.version.ver}'
+        self.screen_title = f'{self.screen_title}'
         print(f'pygame version = {pygame.version.ver}')
 
         self.settings = GuiSettings()
